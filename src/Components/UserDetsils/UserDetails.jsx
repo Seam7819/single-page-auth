@@ -7,8 +7,8 @@ const UserDetails = () => {
 
     return (
         <div>
-            <h1 className="text-3xl text-center">{name}</h1>
-            <p className="text-2xl text-center">{website}</p>
+            <h1 className="text-3xl text-center">User Details :{name}</h1>
+            <p className="text-2xl text-center">Website:{website}</p>
         </div>
     );
 };
