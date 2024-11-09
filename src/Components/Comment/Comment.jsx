@@ -1,6 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Comment = ({comment}) => {
+
+    const navigate = useNavigate()
+    const handleDetails = () =>{
+        navigate(`/comments/${id}`)
+    }
 
     const {id,name,email} =comment;
 
@@ -10,6 +15,7 @@ const Comment = ({comment}) => {
             <h1 className="text-2xl">{name}</h1>
             <p>{email}</p>
             <Link to={`/comments/${id}`} >Show Details</Link>
+            <button onClick={handleDetails}>Details</button>
         </div>
     );
 };
